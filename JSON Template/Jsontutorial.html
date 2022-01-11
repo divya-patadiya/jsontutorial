@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>JSON Tutorial - Divya Patadiya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<style>
+    body,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        font-family: "Poppins", sans-serif
+    }
+    
+    body {
+        font-size: 16px;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+</style>
+
+<body>
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px"> X </a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>What's JSON</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
+            <a href="#object" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Object</a>
+            <a href="#array" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Array</a>
+            <a href="#value" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Value</a>
+            <a href="#string" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">String</a>
+            <a href="#number" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Number</a>
+            <a href="#whitespace" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Whitespace</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>What's JSON</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+
+        <!-- Header -->
+        <div class="w3-container" style="margin-top:80px" id="showcase">
+            <h1 class="w3-jumbo"><b>JSON</b></h1>
+            <h1 class="w3-xxxlarge w3-text-red"><b>Introduction.</b></h1>
+            <hr style="width:50px;border:5px solid red" class="w3-round">
+            <p>JSON (JavaScript Object Notation) is a lightweight data-interchange format. It is easy for humans to read and write. It is easy for machines to parse and generate. It is based on a subset of the JavaScript Programming Language Standard ECMA-262
+                3rd Edition - December 1999. JSON is a text format that is completely language independent but uses conventions that are familiar to programmers of the C-family of languages, including C, C++, C#, Java, JavaScript, Perl, Python, and many
+                others. These properties make JSON an ideal data-interchange language.</p>
+            <p>JSON is built on two structures:</p>
+            <p>A collection of name/value pairs. In various languages, this is realized as an object, record, struct, dictionary, hash table, keyed list, or associative array.</p>
+            <p>An ordered list of values. In most languages, this is realized as an array, vector, list, or sequence.</p>
+            <p>These are universal data structures. Virtually all modern programming languages support them in one form or another. It makes sense that a data format that is interchangeable with programming languages also be based on these structures.</p>
+            <p>In JSON, they take on these forms:</p>
+
+        </div>
+
+
+        <!-- Services -->
+        <div class="w3-container" id="object" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-black"><b>Object</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round">
+            <p>An object is an unordered set of name/value pairs. An object begins with {left brace and ends with }right brace. Each name is followed by :colon and the name/value pairs are separated by ,comma.</p>
+            <img src="object.PNG" alt="" class="responsive">
+        </div>
+
+
+        <!-- Designers -->
+        <div class="w3-container" id="array" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-black"><b>Array</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round">
+            <p>An array is an ordered collection of values. An array begins with [left bracket and ends with ]right bracket. Values are separated by ,comma.</p>
+            <img src="array.PNG" alt="" class="responsive">
+        </div>
+
+        <!-- Designers -->
+        <div class="w3-container" id="value" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-black"><b>Value</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round">
+            <p>A value can be a string in double quotes, or a number, or true or false or null, or an object or an array. These structures can be nested.</p>
+            <img src="value.PNG" alt="" class="responsive">
+        </div>
+
+        <!-- Designers -->
+        <div class="w3-container" id="string" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-black"><b>String</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round">
+            <p>A string is a sequence of zero or more Unicode characters, wrapped in double quotes, using backslash escapes. A character is represented as a single character string. A string is very much like a C or Java string.</p>
+            <img src="string.PNG" alt="" class="responsive">
+        </div>
+
+
+        <!-- Designers -->
+        <div class="w3-container" id="number" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-black"><b>Number</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round">
+            <p>A number is very much like a C or Java number, except that the octal and hexadecimal formats are not used.</p>
+            <img src="number.PNG" alt="" class="responsive">
+        </div>
+
+        <!-- Designers -->
+        <div class="w3-container" id="whitespace" style="margin-top:75px">
+            <h1 class="w3-xxxlarge w3-text-black"><b>Whitespace</b></h1>
+            <hr style="width:50px;border:5px solid black" class="w3-round">
+            <p>Whitespace can be inserted between any pair of tokens. Excepting a few encoding details, that completely describes the language.</p>
+            <img src="whitespace.PNG" alt="" class="responsive">
+        </div>
+
+
+
+        <!-- End page content -->
+    </div>
+
+    <!-- W3.CSS Container -->
+    <div class="w3-light-grey w3-container  w3-padding-32" style="margin-top: 50px; width: 100%;">
+        <p class="w3-right">Source - json.org</p>
+    </div>
+
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+        // Modal Image Gallery
+        function onClick(element) {
+            document.getElementById("img01").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            var captionText = document.getElementById("caption");
+            captionText.innerHTML = element.alt;
+        }
+    </script>
+
+</body>
+
+</html>
